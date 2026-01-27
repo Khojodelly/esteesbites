@@ -36,7 +36,7 @@ form.addEventListener("submit", function (e) {
     const fullMessage =
         "Name: " + name +
         "\nPhone: " + phone +
-        "\nOrder: " + message;
+        "\nOrder: " + message1;
 
     const whatsappNumber = "233552820935";
     const whatsappURL =
@@ -59,4 +59,5 @@ window.addEventListener("scroll", () => {
             section.classList.add("show");
         }
     });
+
 });

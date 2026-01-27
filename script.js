@@ -26,7 +26,7 @@ form.addEventListener("submit", function (e) {
 
     const name = document.getElementById("name").value.trim();
     const phone = document.getElementById("phone").value.trim();
-    const message1 = document.getElementById("message").value.trim();
+    const message1 = document.getElementById("message1").value.trim();
 
     if (name === ""|| phone === ""|| message1 === "") {
         alert("Please fill in all fields");
@@ -61,3 +61,4 @@ window.addEventListener("scroll", () => {
     });
 
 });
+

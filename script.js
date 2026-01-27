@@ -43,7 +43,7 @@ form.addEventListener("submit", function (e) {
         "https://wa.me/" +
         whatsappNumber +
         "?text=" +
-        encodeURIComponent(fullMessage);
+        encodeURIComponent(message1);
 
     window.open(whatsappURL, "_blank");
 });
@@ -61,4 +61,5 @@ window.addEventListener("scroll", () => {
     });
 
 });
+
 

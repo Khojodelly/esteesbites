@@ -75,7 +75,7 @@ nav ul li a:hover {
 
 /* Prevent content from hiding behind sticky navigation */
 body {
-    padding-top: 70px;
+    padding-top: 0px;
     font-family: "Poppins", sans-serif;
 
 }
@@ -222,4 +222,5 @@ section p{
         opacity: 1;
         transform: translateY(0);
     }
+
 }

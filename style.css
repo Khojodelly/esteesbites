@@ -15,20 +15,46 @@ html{
     scroll-behavior: smooth;
 }
 
+/* Hamburger button (hidden on big screens)*/
+.menu-toggle {
+    display: none; 
+    font-size: 28px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
 /* Navigation bar */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:var(--dark);
+    background-color: var(--dark);
     padding: 15px 40px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 /* Brand name */
-nav h1 {
-    color: var(--primary-color);
-    font-size: 26px;
+.logo {
+    font-size: 36px;
+    font-weight: 700;
     letter-spacing: 2px;
+    color: #ffffff;
+}
+.logo span {
+    color: var(--primary-color);
+}
+.logo small{
+    display: block;
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-top: 2px;
+    color: #ffd9b3;
 }
 
 /* Navigation links */
@@ -75,7 +101,7 @@ nav ul li a:hover {
 
 /* Prevent content from hiding behind sticky navigation */
 body {
-    padding-top: 0px;
+    padding-top: 0;
     font-family: "Poppins", sans-serif;
 
 }
@@ -87,12 +113,14 @@ body {
     url('images/chef.jpg') ;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     color: var(--white);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding-top: 90px;
 
 }
 #home button{
@@ -165,6 +193,7 @@ section p{
 .menu-item {
     background-color: var(--white);
     padding: 15px;
+    overflow: hidden;
     border-radius: 10px;
     font-weight: bold;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -173,9 +202,13 @@ section p{
 
 .menu-item img {
     width: 100%;
-    height: 150px;
+    height: auto;
     border-radius: 8px;
     object-fit: cover;
+    display: block;
+    /*max-width: 100%;*/
+    height: 150px;
+
 }
 .menu-item p{
     margin-top: 10px;
@@ -222,5 +255,55 @@ section p{
         opacity: 1;
         transform: translateY(0);
     }
+}
+@media (min-width: 1200px) {
+    .menu-item {
+        height: 320px;
+    }
+    .home h2 {
+        font-size: 3.5rem;
+    }
+}
+/*Mobile View*/
+@media (max-width:768px) {
+    .logo{
+        font-size: 32px;
+        letter-spacing: 1.5px;
+    }
+    .logo small{
+        font-size: 10px;
+        letter-spacing: 0.8px;
+    }
+    .menu-toggle{
+        display: block;
+    }
 
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #c03a2b;
+        width: 50%;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.4s ease;
+        border-radius: 20px;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+
+    }
+    .nav-links li {
+        padding: 15px 0;
+
+    }
+
+    .nav-links.show{
+        display: flex;
+        max-height: 300px;
+    }
+    .menu-item img {
+        height: 160px;
+    }
 }

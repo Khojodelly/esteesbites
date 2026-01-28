@@ -26,9 +26,10 @@ form.addEventListener("submit", function (e) {
 
     const name = document.getElementById("name").value.trim();
     const phone = document.getElementById("phone").value.trim();
-    const message1 = document.getElementById("message1").value.trim();
+    const location = document.getElementById("location").value.trim();
+    const message1 = document.getElementById("message").value.trim();
 
-    if (name === ""|| phone === ""|| message1 === "") {
+    if (name === ""|| phone === ""||location ===""|| message1 === "") {
         alert("Please fill in all fields");
         return;
     }
@@ -36,7 +37,8 @@ form.addEventListener("submit", function (e) {
     const fullMessage =
         "Name: " + name +
         "\nPhone: " + phone +
-        "\nOrder: " + message1;
+        "\nLocation: "+ location +
+        "\nOrder: " + message;
 
     const whatsappNumber = "233552820935";
     const whatsappURL =
@@ -59,8 +61,27 @@ window.addEventListener("scroll", () => {
             section.classList.add("show");
         }
     });
-
 });
 
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+const navItems = navLinks.querySelectorAll("a");
 
+menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
 
+    // Change icon
+    if (navLinks.classList.contains("show")) {
+        menuToggle.textContent = "✖";
+    } else {
+        menuToggle.textContent = "☰";
+    }
+});
+
+// Auto close menu when a link is clicked
+navItems.forEach(item => {
+    item.addEventListener("click", () => {
+        navLinks.classList.remove("show");
+        menuToggle.textContent = "☰";
+    });
+});

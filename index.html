@@ -12,16 +12,20 @@
 </head>
 <body>
 
+    <header>
     <nav id="navbar">
-        <h1>ESTEESBITES</h1>
+        <div class="logo">ESTEE<span>BITES</span>
+        <small>Fresh • Tasty • Homemade</small></div>
 
-        <ul>
+        <ul class="nav-links" id="navLinks">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#menu">Services</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="menu-toggle" id="menuToggle">☰</div>
     </nav>
+    </header>
 
     <!-- Hero Section -->
     <section id="home">
@@ -119,6 +123,7 @@
     <form id="orderForm">
         <input type="text" id="name" placeholder="Your Name">
         <input type="tel" id="phone" placeholder="Your Phone Number">
+        <input type="text" id="Location" placeholder="Your Location">
         <textarea id="message1" placeholder="Your Order"></textarea>
 
         <button type="submit">Send Order</button>
@@ -132,3 +137,4 @@
 </body>
 
 </html>
+

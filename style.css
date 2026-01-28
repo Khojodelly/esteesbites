@@ -75,7 +75,7 @@ nav ul li a {
     position: relative;
 }
 nav ul li a:hover {
-    color: var(--primary);
+    color: var(--primary-color);
 }
 .nav ul li a::after {
     content: '';
@@ -307,3 +307,4 @@ section p{
         height: 160px;
     }
 }
+

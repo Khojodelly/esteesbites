@@ -27,7 +27,7 @@ form.addEventListener("submit", function (e) {
     const name = document.getElementById("name").value.trim();
     const phone = document.getElementById("phone").value.trim();
     const location = document.getElementById("location").value.trim();
-    const message1 = document.getElementById("message").value.trim();
+    const message1 = document.getElementById("message1").value.trim();
 
     if (name === ""|| phone === ""||location ===""|| message1 === "") {
         alert("Please fill in all fields");
@@ -38,7 +38,7 @@ form.addEventListener("submit", function (e) {
         "Name: " + name +
         "\nPhone: " + phone +
         "\nLocation: "+ location +
-        "\nOrder: " + message;
+        "\nOrder: " + message1;
 
     const whatsappNumber = "233552820935";
     const whatsappURL =
@@ -85,3 +85,4 @@ navItems.forEach(item => {
         menuToggle.textContent = "☰";
     });
 });
+

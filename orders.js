@@ -90,7 +90,8 @@ function sendToWhatsApp() {
         return;
     }*/
 
-    let message = "Hello ESTEESBITES,*%0A%0A";
+    let message = "*Hello ESTEESBITES 😊*%0A";
+    message = "I'm placing order%0A%0A";
     message += `*Customer Name:* ${name}%0A`;
     message += `*Phone:* ${phone}%0A`;
     message += `*Location:* ${location}%0A%0A`;
@@ -108,3 +109,4 @@ function sendToWhatsApp() {
     window.open(`https://wa.me/${businessPhone}?text=${message}`, "_blank");
 
 }
+

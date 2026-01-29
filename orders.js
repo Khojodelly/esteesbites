@@ -90,20 +90,21 @@ function sendToWhatsApp() {
         return;
     }*/
 
-    let message = "Hello ESTEESBITES,\n\n";
-    message += `*Customer Name:* ${name}\n`;
-    message += `*Phone:* ${phone}\n`;
-    message += `*Location:* ${location}\n\n`;
+    let message = "Hello ESTEESBITES,*%0A%0A";
+    message += `*Customer Name:* ${name}%0A`;
+    message += `*Phone:* ${phone}%0A`;
+    message += `*Location:* ${location}%0A%0A`;
 
-    message += "*Order Details:*\n";
+    message += `*Order Details:*%0A`;
     for (let item of orderList.children) {
         let cleanedText = item.textContent.replace("➖", "").trim();
-        message += "-" + cleanedText + "\n";
+        message += "%0A-" + cleanedText;
     }
 
-    message += `\n*Total Amount:* ₵${totalDisplay.textContent}*`;
+    message += `%0A*Total Amount:* ₵${totalDisplay.textContent}%0A`;
     message += "\nThank you! 😊";
 
     const businessPhone = "233552820935"; // CHANGE TO REAL NUMBER
     window.open(`https://wa.me/${businessPhone}?text=${message}`, "_blank");
+
 }

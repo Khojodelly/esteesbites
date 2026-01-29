@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order | ESTEESBITES</title>
+    <link rel="stylesheet" href="orders.css"> 
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">ESTEES<span>BITES</span></div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="orders.html" class="active">Order</a>
+        </nav>
+    </header>
+
+    <!-- ORDERS SECTION -->
+    <section class="orders">
+    <h1>Place Your Order</h1>
+
+    <!-- CAKES -->
+    <h2 class="category">🍰 Cakes</h2>
+    <div class="food-grid">
+
+        <div class="food-card">
+            <img src="images/bento-5.jpg" alt="Bento Cake">
+            <h3>Bento Cake (5 Cupcakes)</h3>
+            <p class="price">₵250</p>
+            <button onclick="addToOrder('Bento Cake (5 Cupcakes)', 250)">Add</button>
+        </div>
+
+        <div class="food-card">
+            <img src="images/bento-2.jpg" alt="Bento Cake">
+            <h3>Bento Cake (2 Cupcakes)</h3>
+            <p class="price">₵220</p>
+            <button onclick="addToOrder('Bento Cake (2 Cupcakes)', 220)">Add</button>
+        </div>
+
+        <div class="food-card">
+            <img src="images/2 tier cake.jpg" alt="2 Tier Cake">
+            <h3>2 Tier Cake</h3>
+            <p class="price">₵500</p>
+            <button onclick="addToOrder('2 Tier Cake', 500)">Add</button>
+        </div>
+
+        <div class="food-card">
+            <img src="images/vintage 6inch.jpg" alt="vintage cake">
+            <h3>Vintage cake 6 inches</h3>
+            <p class="price">₵300</p>
+            <button onclick="addToOrder('Vintage cake 6 inches', 300)">Add</button>
+        </div>
+
+        <div class="food-card">
+            <img src="images/cupcake-12.jpg" alt="Cupcakes">
+            <h3>12 Set Cupcakes</h3>
+            <p class="price">₵150</p>
+            <button onclick="addToOrder('12 Set Cupcakes', 150)">Add</button>
+        </div>
+
+        <div class="food-card">
+            <img src="images/cupcake-6.jpg" alt="Cupcakes">
+            <h3>6 Set Cupcakes</h3>
+            <p class="price">₵80</p>
+            <button onclick="addToOrder('6 Set Cupcakes', 80)">Add</button>
+        </div>
+
+        <div class="food-card">
+            <img src="images/cupcake-4.jpg" alt="Cupcakes">
+            <h3>4 Set Cupcakes</h3>
+            <p class="price">₵50</p>
+            <button onclick="addToOrder('4 Set Cupcakes', 50)">Add</button>
+        </div>
+
+        <div class="food-card">
+            <img src="images/bouquet.jpg" alt="Cupcake Bouquet">
+            <h3>Cupcake Bouquet (7 Set)</h3>
+            <p class="price">₵200</p>
+            <button onclick="addToOrder('Cupcake Bouquet (7 Set)', 200)">Add</button>
+        </div>
+
+        <div class="food-card">
+            <img src="images/7inch.jpg" alt="Cake">
+            <h3>7 Inch Cake (3 Layers)</h3>
+            <p class="price">₵300</p>
+            <button onclick="addToOrder('7 Inch Cake (3 Layers)', 300)">Add</button>
+        </div>
+
+        <div class="food-card">
+            <img src="images/6inch.jpg" alt="Cake">
+            <h3>6 Inch Cake (3 Layers)</h3>
+            <p class="price">₵250</p>
+            <button onclick="addToOrder('6 Inch Cake (3 Layers)', 250)">Add</button>
+        </div>
+
+        <div class="food-card">
+            <img src="images/5inch.jpg" alt="Cake">
+            <h3>5 Inch Cake (2 Layers)</h3>
+            <p class="price">₵120</p>
+            <button onclick="addToOrder('5 Inch Cake (2 Layers)', 120)">Add</button>
+        </div>
+    </div>
+
+    <!-- PIZZA & FAST FOOD -->
+    <h2 class="category">🍕 Pizza & Fast Food</h2>
+<div class="food-grid">
+
+    <div class="food-card">
+        <img src="images/All season.jpg">
+        <h3>All Season Pizza (Medium)</h3>
+        <p class="price">₵100</p>
+        <button onclick="addToOrder('All Season Pizza', 100)">Add</button>
+    </div>
+
+    <div class="food-card">
+        <img src="images/chicken-pizza.jpg">
+        <h3>Chicken Pizza (Medium)</h3>
+        <p class="price">₵110</p>
+        <button onclick="addToOrder('Chicken Pizza', 110)">Add</button>
+    </div>
+
+    <div class="food-card">
+        <img src="images/beef-pizza.jpg">
+        <h3>Beef Pizza (Medium)</h3>
+        <p class="price">₵120</p>
+        <button onclick="addToOrder('Beef Pizza', 120)">Add</button>
+    </div>
+
+    <div class="food-card">
+        <img src="images/shawarma 2.jpg">
+        <h3>Shawarma</h3>
+        <p class="price">₵30</p>
+        <button onclick="addToOrder('Shawarma', 30)">Add</button>
+    </div>
+
+    <div class="food-card">
+        <img src="images/chicken-burger.jpg">
+        <h3>Chicken Burger</h3>
+        <p class="price">₵30</p>
+        <button onclick="addToOrder('Chicken Burger', 30)">Add</button>
+    </div>
+
+    <div class="food-card">
+        <img src="images/beef-burger.jpg">
+        <h3>Beef Burger</h3>
+        <p class="price">₵35</p>
+        <button onclick="addToOrder('Beef Burger', 35)">Add</button>
+    </div>
+
+      <div class="food-card">
+        <img src="images/pie 2.jpg">
+        <h3>Pie</h3>
+        <p class="price">₵10</p>
+        <button onclick="addToOrder('Pie', 10)">Add</button>
+    </div>
+
+
+</div>
+
+    <!-- LOCAL DISHES -->
+<h2 class="category">🍛 Local Dishes</h2>
+<div class="food-grid">
+
+    <div class="food-card">
+        <img src="images/waakye 2.jpg">
+        <h3>Waakye</h3>
+        <p class="price">₵25</p>
+        <button onclick="addToOrder('Waakye', 25)">Add</button>
+    </div>
+
+    <div class="food-card">
+        <img src="images/jollof.jpg">
+        <h3>Jollof Rice</h3>
+        <p class="price">₵30</p>
+        <button onclick="addToOrder('Jollof Rice', 30)">Add</button>
+    </div>
+
+    <div class="food-card">
+        <img src="images/fried 2.jpg">
+        <h3>Fried Rice with chicken</h3>
+        <p class="price">₵30</p>
+        <button onclick="addToOrder('Fried Rice', 30)">Add</button>
+    </div>
+
+</div> 
+
+</section>
+<!-- ORDER SUMMARY -->
+    <section class="order-summary">
+        <h2>Your Order</h2>
+        
+            <form id="order-form">
+        <input type="text" id="customer-name" placeholder="Your Name" required>
+        <input type="tel" id="customer-phone" placeholder="Your Phone Number" required>
+        <input type="text" id="customer-location" placeholder="Your Location" required>
+    </form>
+        <ul id="order-list"></ul>
+        <p class="total">Total: ₵<span id="total">0</span></p>
+
+        <button class="whatsapp-btn" onclick="sendToWhatsApp()">Place Order</button>
+    </section>
+
+
+
+    <script src="orders.js"></script>
+</body>
+</html>

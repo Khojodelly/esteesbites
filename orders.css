@@ -1,0 +1,255 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --brand-orange: #d35400;
+    --brand-orange-dark: #b84300;
+    --text-dark: #222;
+    --brand-light: #ffd9b3;
+    --brand-cream: #fff7f0;
+}
+
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    background: var(--brand-cream);
+    color: var(--text-dark);
+    padding-top: 90px;
+}
+
+/* NAVBAR */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--brand-orange);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.navbar a.active {
+    border-bottom: 2px solid var(--brand-light);
+}
+
+/* LOGO */
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+.logo span {
+    color: var(--brand-light);
+}
+
+/* ORDERS SECTION */
+.orders {
+    padding: 20px;
+}
+
+.orders h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--brand-orange);
+}
+
+/* CATEGORY */
+.category {
+    margin: 40px 0 20px;
+    color: var(--brand-orange);
+}
+
+/* GRID */
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* CARD */
+.food-card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 8px 20px rgba(211,84,0,0.15);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.food-card img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.food-card h3 {
+    margin: 10px 0 5px;
+}
+
+.price {
+    color: #d35400;
+    font-weight: bold;
+}
+
+.food-card button {
+    margin-top: 12px;
+    width: 100%;
+    padding: 10px;
+    background: var(--brand-orange);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(211,84,0,0.25);
+}
+
+.food-card button:hover {
+    background: var(--brand-orange-dark);
+}
+
+/* ORDER SUMMARY */
+.order-summary {
+    margin: 50px 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(211,84,0,0.15);
+}
+
+.order-summary ul {
+    list-style: none;
+}
+
+.total {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--brand-orange);
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 14px;
+    background: #25D366;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.whatsapp-btn:hover {
+    background: #1ebe5d;
+}
+
+#order-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff7f2;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+#order-list button {
+    background: #c94c1a;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#order-list button:active {
+    transform: scale(0.9);
+}
+
+#order-form {
+    background: #fff7f2;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+#order-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+#order-form button {
+    width: 100%;
+    background: #c94c1a;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .food-card img {
+        aspect-ratio: 1/1;
+    }
+    .food-grid {
+        justify-items: center;
+    }
+    .food-card {
+        min-height: 380px;
+        height: 100%;
+        max-width: 380px;
+    }
+    .food-card h3{
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .food-card button {
+        margin-top: auto;
+    }
+
+    body {
+        padding-top: 110px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

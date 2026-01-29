@@ -28,7 +28,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--dark);
+    background-color: #222;
     padding: 15px 40px;
 
     position: fixed;
@@ -46,7 +46,7 @@ nav {
     color: #ffffff;
 }
 .logo span {
-    color: var(--primary-color);
+    color: #c0392b;
 }
 .logo small{
     display: block;
@@ -69,7 +69,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: var(--white);
+    color: #ffffff;
     font-weight: bold;
     transition: color 0.3s;
     position: relative;
@@ -101,7 +101,7 @@ nav ul li a:hover {
 
 /* Prevent content from hiding behind sticky navigation */
 body {
-    padding-top: 0;
+    padding-top: 100px;
     font-family: "Poppins", sans-serif;
 
 }
@@ -127,13 +127,17 @@ body {
     margin-top: 25px;
     padding: 12px 25px;
     background-color: var(--primary-color);
-    color: var(--dark);
     border: none;
-    font-size: 16px;
-    font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#home button a{
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: bold;
+    font-size: 18px;
 }
 
 #home button:hover {
@@ -154,12 +158,13 @@ body {
 }
 /* Sections */
 section {
-    padding: 60px 40px;
+    padding: 30px 20px;
     text-align: center;
     /*animation: fadeup 0.8s ease-in-out;*/
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease;
+    /*opacity: 0;*/
+    /*transform: translateY(30px);
+    transition: all 0.8s ease;*/
+    scroll-margin-top: 80px;
 }
 
 section.show {
@@ -217,34 +222,6 @@ section p{
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
-/* Contact Form */
-#orderForm {
-    max-width: 400px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-}
-
-#orderForm input,
-#orderForm textarea {
-    margin-bottom: 15px;
-    padding: 10px;
-    font-size: 14px;
-}
-
-#orderForm textarea {
-    resize: none;
-    height: 100px;
-}
-
-#orderForm button {
-    padding: 12px;
-    background-color: #c0392b;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
 
 @keyframes fadeup {
     from {
@@ -256,14 +233,14 @@ section p{
         transform: translateY(0);
     }
 }
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
     .menu-item {
         height: 320px;
     }
     .home h2 {
         font-size: 3.5rem;
     }
-}
+}*/
 /*Mobile View*/
 @media (max-width:768px) {
     .logo{
@@ -307,4 +284,3 @@ section p{
         height: 160px;
     }
 }
-
